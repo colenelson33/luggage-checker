@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luggage Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Luggage Checker</h1>
+        <p>Enter the items in your luggage below to see if they are allowed for travel:</p>
+        
+        <form id="luggageForm">
+            <input type="text" id="luggageInput" placeholder="Type your luggage contents..." required>
+            <button type="submit">Check</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // Simple JS to display a sample response on submit
+        document.getElementById('luggageForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const input = document.getElementById('luggageInput').value;
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `Checking luggage for: "${input}"...`;
+        });
+    </script>
+</body>
+</html>
