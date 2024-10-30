@@ -12,32 +12,6 @@ body {
     color: #e0e0e0;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #1c1c1c;
-}
-
-.navbar .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #f0f0f0;
-}
-
-.navbar .nav-links a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #d0d0d0;
-    font-size: 18px;
-}
-
-.navbar .nav-links a:hover {
-    color: #ffffff;
-}
-
 /* About Container */
 .about-container {
     padding: 50px;

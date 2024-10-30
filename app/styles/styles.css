@@ -34,6 +34,26 @@ body {
     font-size: 18px;
 }
 
+.navbar .nav-links a.scan-link{
+    background-color: #67c4ec;
+    color: #1c1c1c;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px
+}
+
+.navbar .nav-links a.scan-link:hover{
+    background-color: #347895;
+    color: #010101;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px
+}
+
 .navbar .nav-links a:hover {
     color: #ffffff;
 }
