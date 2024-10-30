@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luggage Checker</title>
+    <title>Scan - Luggage Checker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,18 +16,12 @@
             <a href="airports.html">Airports</a>
         </nav>
     </header>
-
-    <main class="hero-section">
-        <div class="hero-text">
-            <h1 class="typing-text">Check your luggage for compliance...</h1>
-            <p>Let AI ensure your items are travel-ready.</p>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2024 Luggage Checker. All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <h1>Scan Your Luggage</h1>
+    <p>Upload an image of your luggage to see if it meets airport standards.</p>
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <label for="luggage">Choose a luggage image:</label>
+        <input type="file" id="luggage" name="luggage"><br><br>
+        <input type="submit" value="Scan">
+    </form>
 </body>
 </html>
