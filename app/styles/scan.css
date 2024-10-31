@@ -1,0 +1,165 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and Background */
+body {
+    background-color: #111;
+    color: #e0e0e0;
+}
+/* Main Scan Container */
+.scan-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.scan-container h1 {
+    margin-bottom: 40px;
+    font-size: 48px;
+    color: #f0f0f0;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Input Styles */
+input[type="file"] {
+    border: 2px solid #444;
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+.text-input {
+    width: 80%;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #222;
+    border: 2px solid #444;
+    color: #e0e0e0;
+    border-radius: 10px;
+    resize: vertical; /* Allow vertical resizing only */
+    font-size: 16px;
+}
+
+
+/* Dropdowns */
+.dropdowns {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    gap: 15px;
+}
+
+select {
+    padding: 10px;
+    width: 45%;
+    border-radius: 10px;
+    border: 2px solid #444;
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+/* Submit Button */
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1c1c1c;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #d0d0d0;
+}
+/* Airplane animation */
+.airplane {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5);
+    transition: opacity 0.3s, transform 2s ease-in-out;
+}
+
+.airplane.takeoff {
+    opacity: 1;
+    transform: translate(300px, -300px) scale(1.2); /* Simulate takeoff */
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+    background-color: #555;
+}
+
+/* Hide the original file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Hide the original file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Style the custom label */
+.custom-file-upload {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.upload-label {
+    padding: 10px 20px;
+    background-color: #67c4ec;
+    color: #1c1c1c;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px; /* Ensure label doesn’t overflow */
+}
+
+.upload-label:hover {
+    background-color: #347895;
+    color: #010101;
+}
