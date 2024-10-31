@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body and Background */
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1c1c1c;
+}
+
+.navbar .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.navbar .nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #d0d0d0;
+    font-size: 18px;
+}
+
+.navbar .nav-links a.scan-link{
+    background-color: #67c4ec;
+    color: #1c1c1c;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px
+}
+
+.navbar .nav-links a.scan-link:hover{
+    background-color: #347895;
+    color: #010101;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px
+}
+
+.navbar .nav-links a:hover {
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(10, 10, 10, 0.8), rgba(30, 30, 30, 0.8));
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.typing-text {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #f0f0f0;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.hero-text p {
+    font-size: 22px;
+    color: #b0b0b0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1c1c1c;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #d0d0d0;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
