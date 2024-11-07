@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 class Airport_Database:
 
     def _init_():
-        airports = [('JFK',), ('LAX',), ('LHR',),('PHL',)] #placeholder, should be filled with every airport code
+        airports = {} #placeholder, should be filled with every airport code
         luggage_items = []
         prohibited_items_by_airport = []
         prohibited_items = {}
@@ -36,6 +36,20 @@ class Airport_Database:
         conn.commit()
         conn.close()
 
+    def scrape_airports(self): #this method *should* scrape a wikipedia page to create a dictionary of international airports by their code
+        url = 'https://en.wikipedia.org/wiki/List_of_international_airports_by_country'
+        response = requests.get(url)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        tables = soup.find_all('table', {'class': 'wikitable'})
+
+        for table in tables:
+            for row in table.find_all('tr')[1:]:  # Skip the header row
+                columns = row.find_all('td')
+                if len(columns) >= 2:
+                    airport_name = columns[0].text.strip()
+                    airport_code = columns[1].text.strip()
+                    self.airports[airport_code] = airport_name
+
     def scrape_tsa_prohibited_items(self): #this method *should* scrape all the items prohibited by TSA and place them in a list
         url = 'https://www.tsa.gov/travel/security-screening/whatcanibring/all' 
         response = requests.get(url)
@@ -55,8 +69,9 @@ class Airport_Database:
         cursor = conn.cursor()
         
         # Add airports to database
-        for code in self.airports:
-            cursor.executemany('INSERT OR IGNORE INTO Airports (code) VALUES (?)', code)
+        self.scrape_airports()
+        for code, name in self.airports.items():
+                cursor.execute('''INSERT OR IGNORE INTO Airports (code, name) VALUES (?, ?)''', (code, name))
         
         # Add prohibited items to database
         items = self.scrape_tsa_prohibited_items()
