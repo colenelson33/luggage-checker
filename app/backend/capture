@@ -1,0 +1,49 @@
+import cv2
+import numpy as np
+from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2, preprocess_input, decode_predictions
+from tensorflow.keras.preprocessing import image
+
+def capture_image():
+    cap = cv2.VideoCapture(0)  # 0 is typically the default camera
+    print("Press space to capture the image, ESC to exit.")
+    while True:
+        ret, frame = cap.read()
+        cv2.imshow('Capture Mode - Press Space to capture the image', frame)
+        k = cv2.waitKey(1)
+        if k == 27:  # Esc key to stop
+            cap.release()
+            cv2.destroyAllWindows()
+            return None
+        elif k == 32:  # Space bar to capture the image
+            cv2.imwrite('luggage_item.jpg', frame)
+            print("Image captured!")
+            cap.release()
+            cv2.destroyAllWindows()
+            return 'luggage_item.jpg'
+
+def process_image(image_path):
+    img = cv2.imread(image_path)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # Convert to grayscale
+    resized = cv2.resize(gray, (224, 224))  # Resize image to 224x224
+    cv2.imwrite('processed_image.jpg', resized)
+    return 'processed_image.jpg'
+
+def recognize_objects(processed_image_path):
+    model = MobileNetV2(weights='imagenet')  # Load pre-trained MobileNetV2
+    img = image.load_img(processed_image_path, target_size=(224, 224))  # Load the image file
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0)
+    x = preprocess_input(x)
+    preds = model.predict(x)
+    print('Predicted:', decode_predictions(preds, top=3)[0])  # Decode the results into a list of tuples (class, description, probability)
+    return decode_predictions(preds, top=3)[0]
+
+def main():
+    image_path = capture_image()
+    if image_path:
+        processed_image_path = process_image(image_path)
+        predictions = recognize_objects(processed_image_path)
+        print(predictions)
+
+if __name__ == '__main__':
+    main()
