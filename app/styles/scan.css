@@ -163,3 +163,7 @@ input[type="file"] {
     background-color: #347895;
     color: #010101;
 }
+
+.response-output {
+    color: white;
+}
