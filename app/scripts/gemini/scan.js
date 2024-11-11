@@ -13,7 +13,7 @@ document.getElementById("submit-btn").addEventListener("click", async function (
     formData.append("description", description); // Add description to the form data
 
     try {
-        const response = await fetch('http://localhost:3000/analyze-image', {
+        const response = await fetch('http://ec2-3-144-122-137.us-east-2.compute.amazonaws.com:80/analyze-image', {
             method: 'POST',
             body: formData,
         });
