@@ -68,11 +68,11 @@
 
             <!-- Submit Button -->
             <button type="submit" id="submit-btn">Submit ✈️</button>
+            <div id="response-output"></div>
 
             <div id="airplane-animation" class="airplane"></div>
             <script>
                 document.getElementById("submit-btn").addEventListener("click", function (event) {
-                console.log("ehllo")
                     event.preventDefault(); // Prevent the form from submitting immediately
 
                 const airplane = document.getElementById("airplane-animation");
@@ -87,6 +87,7 @@
                 }, 2000); // Adjust the timing as needed
             });
             </script>
+            <script src="./../scripts/gemini/scan.js"></script>
         </div>
     </main>
 
