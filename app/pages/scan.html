@@ -26,6 +26,13 @@
                 <label for="file-upload" id="file-label" class="upload-label">Choose an Image</label>
                 <input id="file-upload" type="file" accept="image/*" />
             </div>
+            <div class="custom-file-upload">
+                <button id="open-camera">Take a Photo</button>
+            </div>
+            <div id="response-output"></div>
+<div id="image-container"></div>
+            <video id="camera-preview" style="display: none;" autoplay></video>
+            <canvas id="canvas" style="display: none;"></canvas>
             <script>
                 const fileUpload = document.getElementById('file-upload');
                 const fileLabel = document.getElementById('file-label');

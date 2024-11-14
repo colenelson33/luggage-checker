@@ -11,6 +11,7 @@ body {
     background-color: #111;
     color: #e0e0e0;
 }
+
 /* Main Scan Container */
 .scan-container {
     text-align: center;
@@ -52,7 +53,6 @@ input[type="file"] {
     resize: vertical; /* Allow vertical resizing only */
     font-size: 16px;
 }
-
 
 /* Dropdowns */
 .dropdowns {
@@ -98,6 +98,7 @@ select {
     width: 100%;
     color: #d0d0d0;
 }
+
 /* Airplane animation */
 .airplane {
     position: absolute;
@@ -126,11 +127,6 @@ select {
 
 #submit-btn:hover {
     background-color: #555;
-}
-
-/* Hide the original file input */
-input[type="file"] {
-    display: none;
 }
 
 /* Hide the original file input */
@@ -167,3 +163,28 @@ input[type="file"] {
 .response-output {
     color: white;
 }
+
+/* Image Container for Result Image */
+#image-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#result-image {
+    max-width: 100%;
+    border: 2px solid #67c4ec; /* Border color matches upload label */
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#image-container {
+    position: relative; /* Ensure positioning for overlay */
+    display: inline-block;
+}
+
+#highlight-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
