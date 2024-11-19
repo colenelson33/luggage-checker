@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Airport Cards</title>
+        <style>
+            .airport-card {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 5px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="airport-card" data-name="Khabarovsk (Khabarovsk Novy Airport)">
+            <h2>Khabarovsk Novy Airport - Khabarovsk</h2>
+            <p>Khabarovsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Komsomolsk-on-Amur (Komsomolsk-on-Amur Airport)">
+            <h2>Komsomolsk-on-Amur Airport - Komsomolsk-on-Amur</h2>
+            <p>Komsomolsk-on-Amur</p>
+        </div>
+
+        <div class="airport-card" data-name="Krasnodar (Pashkovsky Airport)">
+            <h2>Pashkovsky Airport - Krasnodar</h2>
+            <p>Krasnodar</p>
+        </div>
+
+        <div class="airport-card" data-name="Krasnoyarsk (Yemelyanovo International Airport)">
+            <h2>Yemelyanovo International Airport - Krasnoyarsk</h2>
+            <p>Krasnoyarsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Kursk (Kursk Vostochny Airport)">
+            <h2>Kursk Vostochny Airport - Kursk</h2>
+            <p>Kursk</p>
+        </div>
+
+        <div class="airport-card" data-name="Magadan (Sokol Airport)">
+            <h2>Sokol Airport - Magadan</h2>
+            <p>Magadan</p>
+        </div>
+
+        <div class="airport-card" data-name="Magnitogorsk (Magnitogorsk International Airport)">
+            <h2>Magnitogorsk International Airport - Magnitogorsk</h2>
+            <p>Magnitogorsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Makhachkala (Uytash Airport)">
+            <h2>Uytash Airport - Makhachkala</h2>
+            <p>Makhachkala</p>
+        </div>
+
+        <div class="airport-card" data-name="Mineralnye Vody (Mineralnye Vody Airport)">
+            <h2>Mineralnye Vody Airport - Mineralnye</h2>
+            <p>Mineralnye Vody</p>
+        </div>
+
+        <div class="airport-card" data-name="Moscow (Domodedovo International Airport)">
+            <h2>Domodedovo International Airport - Moscow</h2>
+            <p>Moscow</p>
+        </div>
+
+        <div class="airport-card" data-name="Zhukovsky International Airport (ZIA)">
+            <h2>ZIA - Zhukovsky</h2>
+            <p>Zhukovsky International Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Sheremetyevo International Airport (SVO)">
+            <h2>SVO - Sheremetyevo</h2>
+            <p>Sheremetyevo International Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Vnukovo Airport (VKO)">
+            <h2>VKO - Vnukovo</h2>
+            <p>Vnukovo Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Murmansk (Murmansk Airport)">
+            <h2>Murmansk Airport - Murmansk</h2>
+            <p>Murmansk</p>
+        </div>
+
+        <div class="airport-card" data-name="Nalchik (Nalchik Airport)">
+            <h2>Nalchik Airport - Nalchik</h2>
+            <p>Nalchik</p>
+        </div>
+
+        <div class="airport-card" data-name="Nizhnevartovsk (Nizhnevartovsk Airport)">
+            <h2>Nizhnevartovsk Airport - Nizhnevartovsk</h2>
+            <p>Nizhnevartovsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Nizhnekamsk (Begishevo Airport)">
+            <h2>Begishevo Airport - Nizhnekamsk</h2>
+            <p>Nizhnekamsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Nizhny Novgorod (Strigino Airport)">
+            <h2>Strigino Airport - Nizhny</h2>
+            <p>Nizhny Novgorod</p>
+        </div>
+
+        <div class="airport-card" data-name="Novokuznetsk (Spichenkovo Airport)">
+            <h2>Spichenkovo Airport - Novokuznetsk</h2>
+            <p>Novokuznetsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Novosibirsk (Tolmachevo Airport)">
+            <h2>Tolmachevo Airport - Novosibirsk</h2>
+            <p>Novosibirsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Omsk (Omsk Tsentralny Airport)">
+            <h2>Omsk Tsentralny Airport - Omsk</h2>
+            <p>Omsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Orenburg (Orenburg Tsentralny Airport)">
+            <h2>Orenburg Tsentralny Airport - Orenburg</h2>
+            <p>Orenburg</p>
+        </div>
+
+        <div class="airport-card" data-name="Orsk (Orsk Airport)">
+            <h2>Orsk Airport - Orsk</h2>
+            <p>Orsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Perm (Perm International Airport)">
+            <h2>Perm International Airport - Perm</h2>
+            <p>Perm</p>
+        </div>
+
+        <div class="airport-card" data-name="Petrozavodsk (Petrozavodsk Airport)">
+            <h2>Petrozavodsk Airport - Petrozavodsk</h2>
+            <p>Petrozavodsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Provideniya (Provideniya Bay Airport)">
+            <h2>Provideniya Bay Airport - Provideniya</h2>
+            <p>Provideniya</p>
+        </div>
+
+        <div class="airport-card" data-name="Petropavlovsk-Kamchatsky (Yelizovo Airport)">
+            <h2>Yelizovo Airport - Petropavlovsk-Kamchatsky</h2>
+            <p>Petropavlovsk-Kamchatsky</p>
+        </div>
+
+        <div class="airport-card" data-name="Pskov (Pskov Airport)">
+            <h2>Pskov Airport - Pskov</h2>
+            <p>Pskov</p>
+        </div>
+
+        <div class="airport-card" data-name="Rostov-on-Don (Platov International Airport)">
+            <h2>Platov International Airport - Rostov-on-Don</h2>
+            <p>Rostov-on-Don</p>
+        </div>
+
+        <div class="airport-card" data-name="Saint Petersburg (Pulkovo Airport)">
+            <h2>Pulkovo Airport - Saint</h2>
+            <p>Saint Petersburg</p>
+        </div>
+
+        <div class="airport-card" data-name="Samara (Samara Kurumoch Airport)">
+            <h2>Samara Kurumoch Airport - Samara</h2>
+            <p>Samara</p>
+        </div>
+
+        <div class="airport-card" data-name="Saratov (Saratov Gagarin Airport)">
+            <h2>Saratov Gagarin Airport - Saratov</h2>
+            <p>Saratov</p>
+        </div>
+
+        <div class="airport-card" data-name="Sochi (Sochi International Airport)">
+            <h2>Sochi International Airport - Sochi</h2>
+            <p>Sochi</p>
+        </div>
+
+        <div class="airport-card" data-name="Stavropol (Stavropol Shpakovskoye Airport)">
+            <h2>Stavropol Shpakovskoye Airport - Stavropol</h2>
+            <p>Stavropol</p>
+        </div>
+
+        <div class="airport-card" data-name="Surgut (Surgut International Airport)">
+            <h2>Surgut International Airport - Surgut</h2>
+            <p>Surgut</p>
+        </div>
+
+        <div class="airport-card" data-name="Syktyvkar (Syktyvkar Airport)">
+            <h2>Syktyvkar Airport - Syktyvkar</h2>
+            <p>Syktyvkar</p>
+        </div>
+
+        <div class="airport-card" data-name="Tomsk (Bogashevo Airport)">
+            <h2>Bogashevo Airport - Tomsk</h2>
+            <p>Tomsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Tyumen (Roshchino International Airport)">
+            <h2>Roshchino International Airport - Tyumen</h2>
+            <p>Tyumen</p>
+        </div>
+
+        <div class="airport-card" data-name="Ulan-Ude (Baikal International Airport)">
+            <h2>Baikal International Airport - Ulan-Ude</h2>
+            <p>Ulan-Ude</p>
+        </div>
+
+        <div class="airport-card" data-name="Ulyanovsk (Ulyanovsk Baratayevka Airport)">
+            <h2>Ulyanovsk Baratayevka Airport - Ulyanovsk</h2>
+            <p>Ulyanovsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Ufa (Ufa International Airport)">
+            <h2>Ufa International Airport - Ufa</h2>
+            <p>Ufa</p>
+        </div>
+
+        <div class="airport-card" data-name="Vladivostok (Vladivostok International Airport)">
+            <h2>Vladivostok International Airport - Vladivostok</h2>
+            <p>Vladivostok</p>
+        </div>
+
+        <div class="airport-card" data-name="Vladikavkaz (Beslan Airport)">
+            <h2>Beslan Airport - Vladikavkaz</h2>
+            <p>Vladikavkaz</p>
+        </div>
+
+        <div class="airport-card" data-name="Volgograd (Volgograd International Airport)">
+            <h2>Volgograd International Airport - Volgograd</h2>
+            <p>Volgograd</p>
+        </div>
+
+        <div class="airport-card" data-name="Voronezh (Voronezh International Airport)">
+            <h2>Voronezh International Airport - Voronezh</h2>
+            <p>Voronezh</p>
+        </div>
+
+        <div class="airport-card" data-name="Yakutsk (Yakutsk Airport)">
+            <h2>Yakutsk Airport - Yakutsk</h2>
+            <p>Yakutsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Yaroslavl (Tunoshna Airport)">
+            <h2>Tunoshna Airport - Yaroslavl</h2>
+            <p>Yaroslavl</p>
+        </div>
+
+        <div class="airport-card" data-name="Yekaterinburg (Koltsovo International Airport)">
+            <h2>Koltsovo International Airport - Yekaterinburg</h2>
+            <p>Yekaterinburg</p>
+        </div>
+
+        <div class="airport-card" data-name="Yuzhno-Sakhalinsk (Yuzhno-Sakhalinsk Airport)">
+            <h2>Yuzhno-Sakhalinsk Airport - Yuzhno-Sakhalinsk</h2>
+            <p>Yuzhno-Sakhalinsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Belgrade (Belgrade Nikola Tesla Airport)">
+            <h2>Belgrade Nikola Tesla Airport - Belgrade</h2>
+            <p>Belgrade</p>
+        </div>
+
+        <div class="airport-card" data-name="Niš (Niš Constantine the Great Airport)">
+            <h2>Niš Constantine the Great Airport - Niš</h2>
+            <p>Niš</p>
+        </div>
+
+        <div class="airport-card" data-name="Kraljevo (Morava Airport)">
+            <h2>Morava Airport - Kraljevo</h2>
+            <p>Kraljevo</p>
+        </div>
+
+        <div class="airport-card" data-name="Adana (Şakirpaşa Airport)">
+            <h2>Şakirpaşa Airport - Adana</h2>
+            <p>Adana</p>
+        </div>
+
+        <div class="airport-card" data-name="Alanya (Gazipaşa Airport)">
+            <h2>Gazipaşa Airport - Alanya</h2>
+            <p>Alanya</p>
+        </div>
+
+        <div class="airport-card" data-name="Ankara (Esenboğa International Airport)">
+            <h2>Esenboğa International Airport - Ankara</h2>
+            <p>Ankara</p>
+        </div>
+
+        <div class="airport-card" data-name="Antalya (Antalya Airport)">
+            <h2>Antalya Airport - Antalya</h2>
+            <p>Antalya</p>
+        </div>
+
+        <div class="airport-card" data-name="Bodrum (Milas–Bodrum Airport)">
+            <h2>Milas–Bodrum Airport - Bodrum</h2>
+            <p>Bodrum</p>
+        </div>
+
+        <div class="airport-card" data-name="Bursa (Yenişehir Airport)">
+            <h2>Yenişehir Airport - Bursa</h2>
+            <p>Bursa</p>
+        </div>
+
+        <div class="airport-card" data-name="Dalaman (Dalaman Airport)">
+            <h2>Dalaman Airport - Dalaman</h2>
+            <p>Dalaman</p>
+        </div>
+
+        <div class="airport-card" data-name="Denizli (Denizli Çardak Airport)">
+            <h2>Denizli Çardak Airport - Denizli</h2>
+            <p>Denizli</p>
+        </div>
+
+        <div class="airport-card" data-name="Diyarbakır (Diyarbakır Airport)">
+            <h2>Diyarbakır Airport - Diyarbakır</h2>
+            <p>Diyarbakır</p>
+        </div>
+
+        <div class="airport-card" data-name="Elazığ (Elazığ Airport)">
+            <h2>Elazığ Airport - Elazığ</h2>
+            <p>Elazığ</p>
+        </div>
+
+        <div class="airport-card" data-name="Gaziantep (Oğuzeli Airport)">
+            <h2>Oğuzeli Airport - Gaziantep</h2>
+            <p>Gaziantep</p>
+        </div>
+
+        <div class="airport-card" data-name="Istanbul (Istanbul Airport)">
+            <h2>Istanbul Airport - Istanbul</h2>
+            <p>Istanbul</p>
+        </div>
+
+        <div class="airport-card" data-name="Sabiha Gökçen International Airport (SAW)">
+            <h2>SAW - Sabiha</h2>
+            <p>Sabiha Gökçen International Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="İzmir (Adnan Menderes Airport)">
+            <h2>Adnan Menderes Airport - İzmir</h2>
+            <p>İzmir</p>
+        </div>
+
+        <div class="airport-card" data-name="Kayseri (Erkilet Airport)">
+            <h2>Erkilet Airport - Kayseri</h2>
+            <p>Kayseri</p>
+        </div>
+
+        <div class="airport-card" data-name="Konya (Konya Airport)">
+            <h2>Konya Airport - Konya</h2>
+            <p>Konya</p>
+        </div>
+
+        <div class="airport-card" data-name="Kütahya (Zafer Airport)">
+            <h2>Zafer Airport - Kütahya</h2>
+            <p>Kütahya</p>
+        </div>
+
+        <div class="airport-card" data-name="Malatya (Erhaç Airport)">
+            <h2>Erhaç Airport - Malatya</h2>
+            <p>Malatya</p>
+        </div>
+
+        <div class="airport-card" data-name="Nevşehir (Kapadokya Airport)">
+            <h2>Kapadokya Airport - Nevşehir</h2>
+            <p>Nevşehir</p>
+        </div>
+
+        <div class="airport-card" data-name="Samsun (Samsun-Çarşamba Airport)">
+            <h2>Samsun-Çarşamba Airport - Samsun</h2>
+            <p>Samsun</p>
+        </div>
+
+        <div class="airport-card" data-name="Trabzon (Trabzon Airport)">
+            <h2>Trabzon Airport - Trabzon</h2>
+            <p>Trabzon</p>
+        </div>
+
+        <div class="airport-card" data-name="Zonguldak (Zonguldak Airport)">
+            <h2>Zonguldak Airport - Zonguldak</h2>
+            <p>Zonguldak</p>
+        </div>
+
+        <div class="airport-card" data-name="Chernivtsi (Chernivtsi International Airport)">
+            <h2>Chernivtsi International Airport - Chernivtsi</h2>
+            <p>Chernivtsi</p>
+        </div>
+
+        <div class="airport-card" data-name="Dnipro (Dnipro International Airport)">
+            <h2>Dnipro International Airport - Dnipro</h2>
+            <p>Dnipro</p>
+        </div>
+
+        <div class="airport-card" data-name="Ivano-Frankivsk (Ivano-Frankivsk International Airport)">
+            <h2>Ivano-Frankivsk International Airport - Ivano-Frankivsk</h2>
+            <p>Ivano-Frankivsk</p>
+        </div>
+
+        <div class="airport-card" data-name="Kharkiv (Kharkiv International Airport)">
+            <h2>Kharkiv International Airport - Kharkiv</h2>
+            <p>Kharkiv</p>
+        </div>
+
+        <div class="airport-card" data-name="Kryvyi Rih (Kryvyi Rih International Airport)">
+            <h2>Kryvyi Rih International Airport - Kryvyi</h2>
+            <p>Kryvyi Rih</p>
+        </div>
+
+        <div class="airport-card" data-name="Kyiv (Boryspil International Airport)">
+            <h2>Boryspil International Airport - Kyiv</h2>
+            <p>Kyiv</p>
+        </div>
+
+        <div class="airport-card" data-name="Kyiv International Airport (IEV)">
+            <h2>IEV - Kyiv</h2>
+            <p>Kyiv International Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Lviv (Lviv Danylo Halytskyi International Airport)">
+            <h2>Lviv Danylo Halytskyi International Airport - Lviv</h2>
+            <p>Lviv</p>
+        </div>
+
+        <div class="airport-card" data-name="Mykolaiv (Mykolaiv International Airport)">
+            <h2>Mykolaiv International Airport - Mykolaiv</h2>
+            <p>Mykolaiv</p>
+        </div>
+
+        <div class="airport-card" data-name="Odesa (Odesa International Airport)">
+            <h2>Odesa International Airport - Odesa</h2>
+            <p>Odesa</p>
+        </div>
+
+        <div class="airport-card" data-name="Poltava (Poltava Airport)">
+            <h2>Poltava Airport - Poltava</h2>
+            <p>Poltava</p>
+        </div>
+
+        <div class="airport-card" data-name="Simferopol (Simferopol International Airport)">
+            <h2>Simferopol International Airport - Simferopol</h2>
+            <p>Simferopol</p>
+        </div>
+
+        <div class="airport-card" data-name="Uzhhorod (Uzhhorod International Airport)">
+            <h2>Uzhhorod International Airport - Uzhhorod</h2>
+            <p>Uzhhorod</p>
+        </div>
+
+        <div class="airport-card" data-name="Zaporizhzhia (Zaporizhzhia International Airport)">
+            <h2>Zaporizhzhia International Airport - Zaporizhzhia</h2>
+            <p>Zaporizhzhia</p>
+        </div>
+
+        <div class="airport-card" data-name="Aalborg (Aalborg Airport)">
+            <h2>Aalborg Airport - Aalborg</h2>
+            <p>Aalborg</p>
+        </div>
+
+        <div class="airport-card" data-name="Aarhus (Aarhus Airport)">
+            <h2>Aarhus Airport - Aarhus</h2>
+            <p>Aarhus</p>
+        </div>
+
+        <div class="airport-card" data-name="Billund (Billund Airport)">
+            <h2>Billund Airport - Billund</h2>
+            <p>Billund</p>
+        </div>
+
+        <div class="airport-card" data-name="Copenhagen Airport (CPH)">
+            <h2>CPH - Copenhagen</h2>
+            <p>Copenhagen</p>
+        </div>
+
+        <div class="airport-card" data-name="Tallinn (Lennart Meri Tallinn Airport)">
+            <h2>Lennart Meri Tallinn Airport - Tallinn</h2>
+            <p>Tallinn</p>
+        </div>
+
+        <div class="airport-card" data-name="Tartu (Tartu Airport)">
+            <h2>Tartu Airport - Tartu</h2>
+            <p>Tartu</p>
+        </div>
+
+        <div class="airport-card" data-name="Pärnu (Pärnu Airport)">
+            <h2>Pärnu Airport - Pärnu</h2>
+            <p>Pärnu</p>
+        </div>
+
+        <div class="airport-card" data-name="Vágar (Vágar Airport)">
+            <h2>Vágar Airport - Vágar</h2>
+            <p>Vágar</p>
+        </div>
+
+        <div class="airport-card" data-name="Åland (Mariehamn Airport)">
+            <h2>Mariehamn Airport - Åland</h2>
+            <p>Åland</p>
+        </div>
+
+        <div class="airport-card" data-name="Helsinki (Helsinki-Vantaa Airport)">
+            <h2>Helsinki-Vantaa Airport - Helsinki</h2>
+            <p>Helsinki</p>
+        </div>
+
+        <div class="airport-card" data-name="Kittilä (Kittilä Airport)">
+            <h2>Kittilä Airport - Kittilä</h2>
+            <p>Kittilä</p>
+        </div>
+
+        <div class="airport-card" data-name="Kuopio (Kuopio Airport)">
+            <h2>Kuopio Airport - Kuopio</h2>
+            <p>Kuopio</p>
+        </div>
+
+        <div class="airport-card" data-name="Kuusamo (Kuusamo Airport)">
+            <h2>Kuusamo Airport - Kuusamo</h2>
+            <p>Kuusamo</p>
+        </div>
+
+        <div class="airport-card" data-name="Lappeenranta (Lappeenranta Airport)">
+            <h2>Lappeenranta Airport - Lappeenranta</h2>
+            <p>Lappeenranta</p>
+        </div>
+
+        <div class="airport-card" data-name="Oulu (Oulu Airport)">
+            <h2>Oulu Airport - Oulu</h2>
+            <p>Oulu</p>
+        </div>
+
+        <div class="airport-card" data-name="Rovaniemi (Rovaniemi Airport)">
+            <h2>Rovaniemi Airport - Rovaniemi</h2>
+            <p>Rovaniemi</p>
+        </div>
+
+        <div class="airport-card" data-name="Savonlinna (Savonlinna Airport)">
+            <h2>Savonlinna Airport - Savonlinna</h2>
+            <p>Savonlinna</p>
+        </div>
+
+        <div class="airport-card" data-name="Tampere (Tampere–Pirkkala Airport)">
+            <h2>Tampere–Pirkkala Airport - Tampere</h2>
+            <p>Tampere</p>
+        </div>
+
+        <div class="airport-card" data-name="Turku (Turku Airport)">
+            <h2>Turku Airport - Turku</h2>
+            <p>Turku</p>
+        </div>
+
+        <div class="airport-card" data-name="Vaasa (Vaasa Airport)">
+            <h2>Vaasa Airport - Vaasa</h2>
+            <p>Vaasa</p>
+        </div>
+
+        <div class="airport-card" data-name="Akureyri (Akureyri Airport)">
+            <h2>Akureyri Airport - Akureyri</h2>
+            <p>Akureyri</p>
+        </div>
+
+        <div class="airport-card" data-name="Egilsstaðir (Egilsstaðir Airport)">
+            <h2>Egilsstaðir Airport - Egilsstaðir</h2>
+            <p>Egilsstaðir</p>
+        </div>
+
+        <div class="airport-card" data-name="Keflavik International Airport (KEF)">
+            <h2>KEF - Reykjavík</h2>
+            <p>Keflavik International Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Reykjavík Airport (RKV)">
+            <h2>RKV - Reykjavík</h2>
+            <p>Reykjavík Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Riga (Riga International Airport)">
+            <h2>Riga International Airport - Riga</h2>
+            <p>Riga</p>
+        </div>
+
+        <div class="airport-card" data-name="Ventspils (Ventspils International Airport)">
+            <h2>Ventspils International Airport - Ventspils</h2>
+            <p>Ventspils</p>
+        </div>
+
+        <div class="airport-card" data-name="Kaunas (Kaunas Airport)">
+            <h2>Kaunas Airport - Kaunas</h2>
+            <p>Kaunas</p>
+        </div>
+
+        <div class="airport-card" data-name="Palanga (Palanga International Airport)">
+            <h2>Palanga International Airport - Palanga</h2>
+            <p>Palanga</p>
+        </div>
+
+        <div class="airport-card" data-name="Šiauliai (Šiauliai International Airport)">
+            <h2>Šiauliai International Airport - Šiauliai</h2>
+            <p>Šiauliai</p>
+        </div>
+
+        <div class="airport-card" data-name="Vilnius (Vilnius Airport)">
+            <h2>Vilnius Airport - Vilnius</h2>
+            <p>Vilnius</p>
+        </div>
+
+        <div class="airport-card" data-name="Ålesund (Ålesund Airport)">
+            <h2>Ålesund Airport - Ålesund</h2>
+            <p>Ålesund</p>
+        </div>
+
+        <div class="airport-card" data-name="Bergen (Bergen Airport)">
+            <h2>Bergen Airport - Bergen</h2>
+            <p>Bergen</p>
+        </div>
+
+        <div class="airport-card" data-name="Bodø (Bodø Airport)">
+            <h2>Bodø Airport - Bodø</h2>
+            <p>Bodø</p>
+        </div>
+
+        <div class="airport-card" data-name="Haugesund (Haugesund Airport)">
+            <h2>Haugesund Airport - Haugesund</h2>
+            <p>Haugesund</p>
+        </div>
+
+        <div class="airport-card" data-name="Kristiansand (Kristiansand Airport, Kjevik)">
+            <h2>Kristiansand Airport, Kjevik - Kristiansand</h2>
+            <p>Kristiansand</p>
+        </div>
+
+        <div class="airport-card" data-name="Kristiansund (Kristiansund Airport, Kvernberget)">
+            <h2>Kristiansund Airport, Kvernberget - Kristiansund</h2>
+            <p>Kristiansund</p>
+        </div>
+
+        <div class="airport-card" data-name="Oslo (Oslo Airport, Gardermoen)">
+            <h2>Oslo Airport, Gardermoen - Oslo</h2>
+            <p>Oslo</p>
+        </div>
+
+        <div class="airport-card" data-name="Sandefjord Airport, Torp (TRF)">
+            <h2>TRF - Sandefjord</h2>
+            <p>Sandefjord Airport, Torp</p>
+        </div>
+
+        <div class="airport-card" data-name="Stavanger (Stavanger Airport)">
+            <h2>Stavanger Airport - Stavanger</h2>
+            <p>Stavanger</p>
+        </div>
+
+        <div class="airport-card" data-name="Tromsø (Tromsø Airport)">
+            <h2>Tromsø Airport - Tromsø</h2>
+            <p>Tromsø</p>
+        </div>
+
+        <div class="airport-card" data-name="Trondheim (Trondheim Airport)">
+            <h2>Trondheim Airport - Trondheim</h2>
+            <p>Trondheim</p>
+        </div>
+
+        <div class="airport-card" data-name="Gothenburg (Göteborg Landvetter Airport)">
+            <h2>Göteborg Landvetter Airport - Gothenburg</h2>
+            <p>Gothenburg</p>
+        </div>
+
+        <div class="airport-card" data-name="Luleå (Luleå Airport)">
+            <h2>Luleå Airport - Luleå</h2>
+            <p>Luleå</p>
+        </div>
+
+        <div class="airport-card" data-name="Malmö (Malmö Airport)">
+            <h2>Malmö Airport - Malmö</h2>
+            <p>Malmö</p>
+        </div>
+
+        <div class="airport-card" data-name="Norrköping (Norrköping Airport)">
+            <h2>Norrköping Airport - Norrköping</h2>
+            <p>Norrköping</p>
+        </div>
+
+        <div class="airport-card" data-name="Östersund (Åre Östersund Airport)">
+            <h2>Åre Östersund Airport - Östersund</h2>
+            <p>Östersund</p>
+        </div>
+
+        <div class="airport-card" data-name="Stockholm (Stockholm Arlanda Airport)">
+            <h2>Stockholm Arlanda Airport - Stockholm</h2>
+            <p>Stockholm</p>
+        </div>
+
+        <div class="airport-card" data-name="Stockholm Bromma Airport (BMA)">
+            <h2>BMA - Stockholm</h2>
+            <p>Stockholm Bromma Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Stockholm Skavsta Airport (NYO)">
+            <h2>NYO - Stockholm</h2>
+            <p>Stockholm Skavsta Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Stockholm Västerås Airport (VST)">
+            <h2>VST - Stockholm</h2>
+            <p>Stockholm Västerås Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Sundsvall (Sundsvall–Timrå Airport)">
+            <h2>Sundsvall–Timrå Airport - Sundsvall</h2>
+            <p>Sundsvall</p>
+        </div>
+
+        <div class="airport-card" data-name="Umeå (Umeå Airport)">
+            <h2>Umeå Airport - Umeå</h2>
+            <p>Umeå</p>
+        </div>
+
+        <div class="airport-card" data-name="Växjö (Växjö Airport)">
+            <h2>Växjö Airport - Växjö</h2>
+            <p>Växjö</p>
+        </div>
+
+        <div class="airport-card" data-name="Visby (Visby Airport)">
+            <h2>Visby Airport - Visby</h2>
+            <p>Visby</p>
+        </div>
+
+        <div class="airport-card" data-name="Pago Pago (Pago Pago International Airport)">
+            <h2>Pago Pago International Airport - Pago</h2>
+            <p>Pago Pago</p>
+        </div>
+
+        <div class="airport-card" data-name="Adelaide (Adelaide Airport)">
+            <h2>Adelaide Airport - Adelaide</h2>
+            <p>Adelaide</p>
+        </div>
+
+        <div class="airport-card" data-name="Brisbane (Brisbane Airport)">
+            <h2>Brisbane Airport - Brisbane</h2>
+            <p>Brisbane</p>
+        </div>
+
+        <div class="airport-card" data-name="Broome (Broome International Airport)">
+            <h2>Broome International Airport - Broome</h2>
+            <p>Broome</p>
+        </div>
+
+        <div class="airport-card" data-name="Cairns (Cairns Airport)">
+            <h2>Cairns Airport - Cairns</h2>
+            <p>Cairns</p>
+        </div>
+
+        <div class="airport-card" data-name="Canberra (Canberra Airport)">
+            <h2>Canberra Airport - Canberra</h2>
+            <p>Canberra</p>
+        </div>
+
+        <div class="airport-card" data-name="Darwin (Darwin International Airport)">
+            <h2>Darwin International Airport - Darwin</h2>
+            <p>Darwin</p>
+        </div>
+
+        <div class="airport-card" data-name="Gold Coast (Gold Coast Airport)">
+            <h2>Gold Coast Airport - Gold</h2>
+            <p>Gold Coast</p>
+        </div>
+
+        <div class="airport-card" data-name="Hobart (Hobart Airport)">
+            <h2>Hobart Airport - Hobart</h2>
+            <p>Hobart</p>
+        </div>
+
+        <div class="airport-card" data-name="Horn Island (Horn Island Airport)">
+            <h2>Horn Island Airport - Horn</h2>
+            <p>Horn Island</p>
+        </div>
+
+        <div class="airport-card" data-name="Melbourne Airport (MEL)">
+            <h2>MEL - Melbourne</h2>
+            <p>Melbourne Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Newcastle (Newcastle Airport[2])">
+            <h2>Newcastle Airport[2] - Newcastle</h2>
+            <p>Newcastle</p>
+        </div>
+
+        <div class="airport-card" data-name="Perth (Perth Airport)">
+            <h2>Perth Airport - Perth</h2>
+            <p>Perth</p>
+        </div>
+
+        <div class="airport-card" data-name="Port Hedland (Port Hedland International Airport)">
+            <h2>Port Hedland International Airport - Port</h2>
+            <p>Port Hedland</p>
+        </div>
+
+        <div class="airport-card" data-name="Sunshine Coast (Sunshine Coast Airport[3])">
+            <h2>Sunshine Coast Airport[3] - Sunshine</h2>
+            <p>Sunshine Coast</p>
+        </div>
+
+        <div class="airport-card" data-name="Sydney Airport (SYD)">
+            <h2>SYD - Sydney</h2>
+            <p>Sydney Airport</p>
+        </div>
+
+        <div class="airport-card" data-name="Sydney (Western Sydney Airport (upcoming))">
+            <h2>Western Sydney Airport (upcoming) - Sydney</h2>
+            <p>Sydney</p>
+        </div>
+
+        <div class="airport-card" data-name="Flying Fish Cove (Christmas Island Airport)">
+            <h2>Christmas Island Airport - Flying</h2>
+            <p>Flying Fish Cove</p>
+        </div>
+
+        <div class="airport-card" data-name="Cocos (Keeling) Islands (Cocos (Keeling) Islands Airport)">
+            <h2>Cocos (Keeling) Islands Airport - Cocos</h2>
+            <p>Cocos (Keeling) Islands</p>
+        </div>
+
+        <div class="airport-card" data-name="Avarua (Rarotonga Airport)">
+            <h2>Rarotonga Airport - Avarua</h2>
+            <p>Avarua</p>
+        </div>
+
+        <div class="airport-card" data-name="Hanga Roa (Mataveri International Airport)">
+            <h2>Mataveri International Airport - Hanga</h2>
+            <p>Hanga Roa</p>
+        </div>
+
+        <div class="airport-card" data-name="Nadi (Nadi International Airport)">
+            <h2>Nadi International Airport - Nadi</h2>
+            <p>Nadi</p>
+        </div>
+
+        <div class="airport-card" data-name="Suva (Nausori International Airport)">
+            <h2>Nausori International Airport - Suva</h2>
+            <p>Suva</p>
+        </div>
+
+        <div class="airport-card" data-name="Papeete (Faa'a International Airport)">
+            <h2>Faa'a International Airport - Papeete</h2>
+            <p>Papeete</p>
+        </div>
+
+        <div class="airport-card" data-name="Hagåtña (Antonio B. Won Pat International Airport)">
+            <h2>Antonio B. Won Pat International Airport - Hagåtña</h2>
+            <p>Hagåtña</p>
+        </div>
+
+        <div class="airport-card" data-name="Kiritimati (Cassidy International Airport)">
+            <h2>Cassidy International Airport - Kiritimati</h2>
+            <p>Kiritimati</p>
+        </div>
+
+        <div class="airport-card" data-name="Tarawa (Bonriki International Airport)">
+            <h2>Bonriki International Airport - Tarawa</h2>
+            <p>Tarawa</p>
+        </div>
+
+        <div class="airport-card" data-name="Kwajalein (Bucholz Army Airfield)">
+            <h2>Bucholz Army Airfield - Kwajalein</h2>
+            <p>Kwajalein</p>
+        </div>
+
+        <div class="airport-card" data-name="Majuro (Marshall Islands International Airport)">
+            <h2>Marshall Islands International Airport - Majuro</h2>
+            <p>Majuro</p>
+        </div>
+
+        <div class="airport-card" data-name="Chuuk (Chuuk International Airport)">
+            <h2>Chuuk International Airport - Chuuk</h2>
+            <p>Chuuk</p>
+        </div>
+
+        <div class="airport-card" data-name="Kosrae (Kosrae International Airport)">
+            <h2>Kosrae International Airport - Kosrae</h2>
+            <p>Kosrae</p>
+        </div>
+
+        <div class="airport-card" data-name="Pohnpei (Pohnpei International Airport)">
+            <h2>Pohnpei International Airport - Pohnpei</h2>
+            <p>Pohnpei</p>
+        </div>
+
+        <div class="airport-card" data-name="Yap (Yap International Airport)">
+            <h2>Yap International Airport - Yap</h2>
+            <p>Yap</p>
+        </div>
+
+        <div class="airport-card" data-name="Yaren District (Nauru International Airport)">
+            <h2>Nauru International Airport - Yaren</h2>
+            <p>Yaren District</p>
+        </div>
+
+        <div class="airport-card" data-name="Nouméa (La Tontouta International Airport)">
+            <h2>La Tontouta International Airport - Nouméa</h2>
+            <p>Nouméa</p>
+        </div>
+
+        <div class="airport-card" data-name="Auckland (Auckland Airport)">
+            <h2>Auckland Airport - Auckland</h2>
+            <p>Auckland</p>
+        </div>
+
+        <div class="airport-card" data-name="Christchurch (Christchurch Airport)">
+            <h2>Christchurch Airport - Christchurch</h2>
+            <p>Christchurch</p>
+        </div>
+
+        <div class="airport-card" data-name="Dunedin (Dunedin Airport)">
+            <h2>Dunedin Airport - Dunedin</h2>
+            <p>Dunedin</p>
+        </div>
+
+        <div class="airport-card" data-name="Hamilton (Hamilton Airport)">
+            <h2>Hamilton Airport - Hamilton</h2>
+            <p>Hamilton</p>
+        </div>
+
+        <div class="airport-card" data-name="Queenstown (Queenstown Airport)">
+            <h2>Queenstown Airport - Queenstown</h2>
+            <p>Queenstown</p>
+        </div>
+
+        <div class="airport-card" data-name="Wellington (Wellington Airport)">
+            <h2>Wellington Airport - Wellington</h2>
+            <p>Wellington</p>
+        </div>
+
+        <div class="airport-card" data-name="Burnt Pine (Norfolk Island Airport)">
+            <h2>Norfolk Island Airport - Burnt</h2>
+            <p>Burnt Pine</p>
+        </div>
+
+        <div class="airport-card" data-name="Rota (Rota International Airport)">
+            <h2>Rota International Airport - Rota</h2>
+            <p>Rota</p>
+        </div>
+
+        <div class="airport-card" data-name="Saipan (Saipan International Airport)">
+            <h2>Saipan International Airport - Saipan</h2>
+            <p>Saipan</p>
+        </div>
+
+        <div class="airport-card" data-name="Tinian (Tinian International Airport)">
+            <h2>Tinian International Airport - Tinian</h2>
+            <p>Tinian</p>
+        </div>
+
+        <div class="airport-card" data-name="Alofi (Niue International Airport)">
+            <h2>Niue International Airport - Alofi</h2>
+            <p>Alofi</p>
+        </div>
+
+        <div class="airport-card" data-name="Koror (Roman Tmetuchl International Airport)">
+            <h2>Roman Tmetuchl International Airport - Koror</h2>
+            <p>Koror</p>
+        </div>
+
+        <div class="airport-card" data-name="Daru (Daru Airport)">
+            <h2>Daru Airport - Daru</h2>
+            <p>Daru</p>
+        </div>
+
+        <div class="airport-card" data-name="Mount Hagen (Mount Hagen Airport)">
+            <h2>Mount Hagen Airport - Mount</h2>
+            <p>Mount Hagen</p>
+        </div>
+
+        <div class="airport-card" data-name="Port Moresby (Jacksons International Airport)">
+            <h2>Jacksons International Airport - Port</h2>
+            <p>Port Moresby</p>
+        </div>
+
+        <div class="airport-card" data-name="Apia (Faleolo International Airport)">
+            <h2>Faleolo International Airport - Apia</h2>
+            <p>Apia</p>
+        </div>
+
+        <div class="airport-card" data-name="Honiara (Honiara International Airport)">
+            <h2>Honiara International Airport - Honiara</h2>
+            <p>Honiara</p>
+        </div>
+
+        <div class="airport-card" data-name="Nukuʻalofa (Fuaʻamotu International Airport)">
+            <h2>Fuaʻamotu International Airport - Nukuʻalofa</h2>
+            <p>Nukuʻalofa</p>
+        </div>
+
+        <div class="airport-card" data-name="Vavaʻu (Vavaʻu International Airport)">
+            <h2>Vavaʻu International Airport - Vavaʻu</h2>
+            <p>Vavaʻu</p>
+        </div>
+
+        <div class="airport-card" data-name="Funafuti (Funafuti International Airport)">
+            <h2>Funafuti International Airport - Funafuti</h2>
+            <p>Funafuti</p>
+        </div>
+
+        <div class="airport-card" data-name="Luganville (Santo-Pekoa International Airport)">
+            <h2>Santo-Pekoa International Airport - Luganville</h2>
+            <p>Luganville</p>
+        </div>
+
+        <div class="airport-card" data-name="Port Vila (Bauerfield International Airport)">
+            <h2>Bauerfield International Airport - Port</h2>
+            <p>Port Vila</p>
+        </div>
+
+        <div class="airport-card" data-name="Futuna (Pointe Vele Airport)">
+            <h2>Pointe Vele Airport - Futuna</h2>
+            <p>Futuna</p>
+        </div>
+
+        <div class="airport-card" data-name="Wallis (Hihifo Airport)">
+            <h2>Hihifo Airport - Wallis</h2>
+            <p>Wallis</p>
+        </div>
+
+    </body>
+    </html>

@@ -5,21 +5,21 @@ from bs4 import BeautifulSoup
 
 class Airport_Database:
 
-    def _init_():
-        airports = {} #placeholder, should be filled with every airport code
-        luggage_items = []
+    def __init__(self):
+        self.airports = {} #placeholder, should be filled with every airport code
+        self.luggage_items = []
         prohibited_items_by_airport = []
         prohibited_items = {}
 
         conn = sqlite3.connect('airport_luggage.db')  
         cursor = conn.cursor() #I'm not totally familiar with this code, but I believe it creates database tables for:
-                                                #the airports, prohibited items, and items prohibited by each airport specifically
+                                    #the airports, prohibited items, and items prohibited by each airport specifically
         cursor.execute('''
-            CREATE TABLE IF NOT EXISTS Airports (
-                id INTEGER PRIMARY KEY,
-            code TEXT UNIQUE NOT NULL
-            )
-        ''')
+                        CREATE TABLE IF NOT EXISTS Airports (
+                        code TEXT PRIMARY KEY,
+                        name TEXT NOT NULL
+                        )
+                    ''')
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS ProhibitedItems (
                 id INTEGER PRIMARY KEY,
@@ -80,12 +80,6 @@ class Airport_Database:
             cursor.execute('INSERT OR IGNORE INTO ProhibitedItems (name, category, permitted) VALUES (?, ?, ?)', 
                         (item['name'], item['category'], item['permitted']))
         
-        # Link prohibited items to airports in a database and a dictionary (the dictionary could be removed, I just don't know how to use databases)
-        self.prohibited_items_by_airport = [(1, 1), (1, 2), (2, 2), (2, 3), (3, 1), (3, 3), (4, 1), (4, 2), (4, 3)]
-        for airport_id, item_id in self.prohibited_items_by_airport:
-            cursor.executemany('INSERT OR IGNORE INTO AirportProhibitedItems (airport_id, item_id) VALUES (?, ?)', (airport_id,item_id))
-            self.prohibited_items[airport_id] = items[item_id]
-        
         conn.commit()
         conn.close()
 
@@ -106,7 +100,6 @@ air_db.populate_db()
 item_check(air_db, "JFK", contraband)
 output("JFK", contraband)
 
-=======
 def init_db():
     conn = sqlite3.connect('airport_luggage.db')
     cursor = conn.cursor()
