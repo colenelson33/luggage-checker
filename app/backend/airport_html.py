@@ -1,7 +1,7 @@
 import sqlite3
 
 # Connect to the SQLite database
-conn = sqlite3.connect('Airports.db')
+conn = sqlite3.connect('airport_luggage.db')
 cursor = conn.cursor()
 
 # Query to select all airports from the database
@@ -50,8 +50,4 @@ def generate_html(airports):
 # Generate the HTML content
 html_content = generate_html(airports)
 
-# Write the HTML content to a file
-with open('airport_cards.html', 'w') as file:
-    file.write(html_content)
-
-print("HTML file 'airport_cards.html' has been created.")
+print(html_content)
