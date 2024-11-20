@@ -28,7 +28,7 @@ document.getElementById("submit-btn").addEventListener("click", async function (
 
     // Combine the selected airports with the user's description
     // If description is provided, append it; otherwise, just include airports
-    let combinedDescription = `Please find whether this will be valid From: ${fromAirport}, To: ${toAirport} airports. Focus on whether it is an international flight or local flight if you do not know the specifics.`;
+    let combinedDescription = `Please find whether this will be valid From: ${fromAirport}, To: ${toAirport} airports. Focus on whether it is an international flight or local flight if you do not know the specifics. Also, provide relevant links to the needed source if possible, however I want to use you just as a quick source for information, so do everything in your power to see if it passes regulations before telling me to search myself. I understand your response might not be perfect. Respond to this in a clean text format, no markdown.`;
     if (descriptionInput !== "") {
         combinedDescription += ` ${descriptionInput}`;
     }
