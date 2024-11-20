@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 /* Input Styles */
@@ -42,7 +42,7 @@ input[type="file"] {
 }
 
 .text-input {
-    width: 80%;
+    width: 100%;
     margin: 10px 0;
     padding: 15px;
     background-color: #222;
@@ -53,24 +53,25 @@ input[type="file"] {
     font-size: 16px;
 }
 
-
-/* Dropdowns */
-.dropdowns {
+.airport-selection {
     display: flex;
-    justify-content: space-around;
-    width: 80%;
-    gap: 15px;
+    gap: 20px;
 }
 
-select {
-    padding: 10px;
-    width: 45%;
-    border-radius: 10px;
-    border: 2px solid #444;
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allow both dropdowns to take equal space */
+}
+
+.dropdown select {
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;
     background-color: #222;
+    border: 2px solid #444;
     color: #e0e0e0;
 }
-
 /* Submit Button */
 .submit-btn {
     margin-top: 20px;
@@ -98,21 +99,6 @@ select {
     width: 100%;
     color: #d0d0d0;
 }
-/* Airplane animation */
-.airplane {
-    position: absolute;
-    left: 50%;
-    bottom: 50px;
-    font-size: 2rem;
-    opacity: 0;
-    transform: translateX(-50%) scale(0.5);
-    transition: opacity 0.3s, transform 2s ease-in-out;
-}
-
-.airplane.takeoff {
-    opacity: 1;
-    transform: translate(300px, -300px) scale(1.2); /* Simulate takeoff */
-}
 
 #submit-btn {
     padding: 10px 20px;
@@ -138,14 +124,6 @@ input[type="file"] {
     display: none;
 }
 
-/* Style the custom label */
-.custom-file-upload {
-    display: inline-block;
-    position: relative;
-    padding-bottom: 20px;
-    cursor: pointer;
-}
-
 .upload-label {
     padding: 10px 20px;
     background-color: #67c4ec;
@@ -164,6 +142,38 @@ input[type="file"] {
     color: #010101;
 }
 
+
 .response-output {
     color: white;
+    padding: 20px;
+    margin: 20px;
+    max-width: 100vh;
+}
+
+.response-output.invalid {
+    border: 2px solid;
+    border-color: #bc3531;
+    border-radius: 20px;
+}
+
+.thinking {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, grey, lightgrey, grey);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 3s linear infinite;
+}
+
+
+@keyframes gradientMove {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }
