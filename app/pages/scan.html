@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scan Luggage - Luggage Checker</title>
-    <link rel="stylesheet" href="./../styles/styles.css">
-    <link rel="stylesheet" href="./../styles/scan.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/scan.css">
 </head>
 <body>
     <header class="navbar">
@@ -22,43 +22,34 @@
         <h1>Scan Your Luggage</h1>
         
         <div class="form-container">
-            <!-- Top Row: Image Upload and Airport Selection -->
-            <div class="form-top-row">
-                <div class="airport-selection">
-                    <div class="dropdown">
-                        <select id="from-airport" name="from-airport">
-                            <option value="" disabled selected>Select your airport</option>
-                            <option value="jfk">JFK</option>
-                            <option value="lax">LAX</option>
-                            <option value="ord">ORD</option>
-                            <option value="atl">ATL</option>
-                        </select>
-                    </div>
-
-                    <div class="dropdown">
-                        <select id="to-airport" name="to-airport">
-                            <option value="" disabled selected>Select destination airport</option>
-                            <option value="lhr">LHR</option>
-                            <option value="cdg">CDG</option>
-                            <option value="sin">SIN</option>
-                            <option value="hnd">HND</option>
-                        </select>
-                    </div>
-                    <label for="file-upload" id="file-label" class="upload-label">Choose an Image</label>
-                    <input id="file-upload" type="file" accept="image/*" />
+            <!-- Top Row: Airport Selection -->
+            <div class="airport-selection">
+                <div class="dropdown">
+                    <select id="from-airport" name="from-airport">
+                        <option value="" disabled selected>Select your airport</option>
+                        <option value="jfk">JFK</option>
+                        <option value="lax">LAX</option>
+                        <option value="ord">ORD</option>
+                        <option value="atl">ATL</option>
+                    </select>
                 </div>
-                <script>
-                    const fileUpload = document.getElementById('file-upload');
-                    const fileLabel = document.getElementById('file-label');
-                    fileUpload.addEventListener('change', function () {
-                        const file = this.files[0]; // Get the first selected file
-                        if (file) {
-                            fileLabel.textContent = `Selected: ${file.name}`;
-                        } else {
-                            fileLabel.textContent = 'Choose an Image';
-                        }
-                    });
-                </script>     
+
+                <div class="dropdown">
+                    <select id="to-airport" name="to-airport">
+                        <option value="" disabled selected>Select destination airport</option>
+                        <option value="lhr">LHR</option>
+                        <option value="cdg">CDG</option>
+                        <option value="sin">SIN</option>
+                        <option value="hnd">HND</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Image Upload and Take Picture Buttons -->
+            <div class="image-buttons">
+                <label for="file-upload" id="file-label" class="upload-label">Choose an Image</label>
+                <input id="file-upload" type="file" accept="image/*" />
+                <button id="take-picture" class="camera-btn">Take Picture</button>
             </div>
 
             <!-- Optional Text Submission -->
@@ -75,14 +66,23 @@
 
             <!-- Airplane Animation Div -->
             <div id="airplane-animation" class="airplane"></div>
-
-            <!-- Scripts -->
-            <script src="./../scripts/run-scan.js"></script>
         </div>
     </main>
+
+    <!-- Camera Modal -->
+    <div id="camera-modal" class="camera-modal" style="display: none;">
+        <div class="camera-content">
+            <video id="video" autoplay playsinline></video>
+            <button id="capture-btn">Capture</button>
+            <button id="close-camera-btn">Close</button>
+        </div>
+    </div>
 
     <footer class="footer">
         <p>&copy; 2024 Luggage Checker. All Rights Reserved. Disclaimer: Use of AI Technology.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="../scripts/run-scan.js"></script>
 </body>
 </html>
