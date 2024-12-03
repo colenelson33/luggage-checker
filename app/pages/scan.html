@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scan Luggage - Luggage Checker</title>
-    <link rel="stylesheet" href="./../styles/styles.css">
-    <link rel="stylesheet" href="./../styles/scan.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/scan.css">
 </head>
 <body>
     <header class="navbar">
@@ -14,6 +14,7 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="airports.html">Airports</a>
+            <a class="scan-link" href="scan.html">Get Started</a>
         </nav>
     </header>
 
@@ -21,27 +22,26 @@
         <h1>Scan Your Luggage</h1>
         
         <div class="form-container">
-            <!-- Image Upload Section -->
-            <div class="custom-file-upload">
+            <!-- Top Row: Airport Selection -->
+            <div class="airport-selection">
+                <div class="dropdown">
+                    <select id="from-airport" name="from-airport">
+                        <option value="" disabled selected>Select your airport</option>
+                        <option value="jfk">JFK</option>
+                        <option value="lax">LAX</option>
+                        <option value="ord">ORD</option>
+                        <option value="atl">ATL</option>
+                    </select>
+                </div>
+
+               <!-- Image Upload and Take Picture Buttons -->
+            <div class="image-buttons">
                 <label for="file-upload" id="file-label" class="upload-label">Choose an Image</label>
                 <input id="file-upload" type="file" accept="image/*" />
+                <button id="take-picture" class="camera-btn">Take Picture</button>
             </div>
-            <script>
-                const fileUpload = document.getElementById('file-upload');
-                const fileLabel = document.getElementById('file-label');
-                fileUpload.addEventListener('change', function () {
-                    const file = this.files[0]; // Get the first selected file
-                    if (file) {
-                        fileLabel.textContent = `Selected: ${file.name}`;
-                    } else {
-                        fileLabel.textContent = 'Choose an Image';
-                    }
-                });
 
-            </script>            
-              
-
-            <!-- To and From Airport Dropdowns -->
+                          <!-- To and From Airport Dropdowns -->
             <div class="dropdowns">
                 <label for="from-airport">From:</label>
                 <select id="from-airport" name="from-airport">
@@ -53,39 +53,38 @@
                     <option value="" disabled selected>Select your destination airport</option>
                 </select>
                 <script src="../scripts/dropdown.js"></script>
-            </div>
-
+              
             <!-- Optional Text Submission -->
-            <label for="text-input">Enter Description of Luggage (Optional):</label>
-            <textarea id="text-input" name="text-input" class="text-input" rows="5" placeholder="Describe your luggage..."></textarea>
+            <div class="text-description">
+                <label for="text-input">Enter Description of Luggage (Optional):</label>
+                <textarea id="text-input" name="text-input" class="text-input" rows="5" placeholder="Describe your luggage..."></textarea>
+            </div>
 
             <!-- Submit Button -->
             <button type="submit" id="submit-btn">Submit ✈️</button>
-            <div id="response-output"></div>
 
+            <!-- Response Output -->
+            <div class="response-output" id="response-output"></div>
+
+            <!-- Airplane Animation Div -->
             <div id="airplane-animation" class="airplane"></div>
-            <script>
-                document.getElementById("submit-btn").addEventListener("click", function (event) {
-                    event.preventDefault(); // Prevent the form from submitting immediately
-
-                const airplane = document.getElementById("airplane-animation");
-
-                // Show the airplane and start the takeoff animation
-                airplane.textContent = "✈️";
-                airplane.classList.add("takeoff");
-
-                // Optionally, reset the animation after a few seconds
-                setTimeout(() => {
-                    airplane.classList.remove("takeoff");
-                }, 2000); // Adjust the timing as needed
-            });
-            </script>
-            <script src="./../scripts/gemini/scan.js"></script>
         </div>
     </main>
 
+    <!-- Camera Modal -->
+    <div id="camera-modal" class="camera-modal" style="display: none;">
+        <div class="camera-content">
+            <video id="video" autoplay playsinline></video>
+            <button id="capture-btn">Capture</button>
+            <button id="close-camera-btn">Close</button>
+        </div>
+    </div>
+
     <footer class="footer">
-        <p>&copy; 2024 Luggage Checker. All Rights Reserved. Disclaimer: Use of AI Technology. </p>
+        <p>&copy; 2024 Luggage Checker. All Rights Reserved. Disclaimer: Use of AI Technology.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="../scripts/run-scan.js"></script>
 </body>
 </html>
