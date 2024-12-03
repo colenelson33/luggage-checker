@@ -22,26 +22,7 @@
         <h1>Scan Your Luggage</h1>
         
         <div class="form-container">
-            <!-- Top Row: Airport Selection -->
-            <div class="airport-selection">
-                <div class="dropdown">
-                    <select id="from-airport" name="from-airport">
-                        <option value="" disabled selected>Select your airport</option>
-                        <option value="jfk">JFK</option>
-                        <option value="lax">LAX</option>
-                        <option value="ord">ORD</option>
-                        <option value="atl">ATL</option>
-                    </select>
-                </div>
-
-               <!-- Image Upload and Take Picture Buttons -->
-            <div class="image-buttons">
-                <label for="file-upload" id="file-label" class="upload-label">Choose an Image</label>
-                <input id="file-upload" type="file" accept="image/*" />
-                <button id="take-picture" class="camera-btn">Take Picture</button>
-            </div>
-
-                          <!-- To and From Airport Dropdowns -->
+            <!-- To and From Airport Dropdowns -->
             <div class="dropdowns">
                 <label for="from-airport">From:</label>
                 <select id="from-airport" name="from-airport">
@@ -53,6 +34,14 @@
                     <option value="" disabled selected>Select your destination airport</option>
                 </select>
                 <script src="../scripts/dropdown.js"></script>
+            </div>
+                
+            <!-- Image Upload and Take Picture Buttons -->
+            <div class="image-buttons">
+                <label for="file-upload" id="file-label" class="upload-label">Choose an Image</label>
+                <input id="file-upload" type="file" accept="image/*" />
+                <button id="take-picture" class="camera-btn">Take Picture</button>
+            </div>
               
             <!-- Optional Text Submission -->
             <div class="text-description">
