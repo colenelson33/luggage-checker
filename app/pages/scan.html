@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scan Luggage - Luggage Checker</title>
+    <title>Scan Luggage - LuggageCheck</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/scan.css">
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">Luggage Checker</div>
+        <div class="logo">LuggageCheck</div>
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -24,15 +24,22 @@
         <div class="form-container">
             <!-- To and From Airport Dropdowns -->
             <div class="dropdowns">
-                <label for="from-airport">From:</label>
-                <select id="from-airport" name="from-airport">
-                    <option value="" disabled selected>Select your departing airport</option>
-                </select>
-
-                <label for="to-airport">To:</label>
-                <select id="to-airport" name="to-airport">
-                    <option value="" disabled selected>Select your destination airport</option>
-                </select>
+                <div class="airport-selection">
+                    <div class="dropdown">
+                        <select id="from-airport" name="from-airport">
+                            <option value="" disabled selected>Select your departing airport</option>
+                            <option value="custom">Enter Custom Code</option>
+                        </select>
+                        <input id="from-custom" class="text-input hidden" type="text" placeholder="Enter 3-letter code" maxlength="3">
+                    </div>
+                    <div class="dropdown">
+                        <select id="to-airport" name="to-airport">
+                            <option value="" disabled selected>Select your destination airport</option>
+                            <option value="custom">Enter Custom Code</option>
+                        </select>
+                        <input id="to-custom" class="text-input hidden" type="text" placeholder="Enter 3-letter code" maxlength="3">
+                    </div>
+                </div>
                 <script src="../scripts/dropdown.js"></script>
             </div>
                 

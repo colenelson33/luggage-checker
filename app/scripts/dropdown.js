@@ -19,20 +19,46 @@ document.addEventListener('DOMContentLoaded', function() {
         {"code": "HND", "name": "Tokyo Haneda Airport"}
     ];
     
-    const select = document.getElementById('from-airport');
-    data.forEach(airport => {
-        const option = document.createElement('option');
-        option.value = airport.code;
-        option.textContent = `${airport.name} (${airport.code})`;
-        select.appendChild(option);
-    });
+    const populateDropdown = (dropdown) => {
+        data.forEach(airport => {
+            const option = document.createElement('option');
+            option.value = airport.code;
+            option.textContent = `${airport.name} (${airport.code})`;
+            dropdown.appendChild(option);
+        });
+    };
 
-    const select2 = document.getElementById('to-airport');
-    data.forEach(airport => {
-        const option = document.createElement('option');
-        option.value = airport.code;
-        option.textContent = `${airport.name} (${airport.code})`;
-        select2.appendChild(option);
-    });
-})
-.catch(error => console.error('Error fetching the airport data:', error));
+    const fromSelect = document.getElementById('from-airport');
+    const fromInput = document.getElementById('from-custom');
+    const toSelect = document.getElementById('to-airport');
+    const toInput = document.getElementById('to-custom');
+
+    populateDropdown(fromSelect);
+    populateDropdown(toSelect);
+
+    // Toggle input field for custom entry
+    const toggleCustomInput = (select, input) => {
+        select.addEventListener('change', () => {
+            if (select.value === 'custom') {
+                input.classList.remove('hidden');
+                input.focus();
+            } else {
+                input.classList.add('hidden');
+                input.value = ''; // Reset custom input
+            }
+        });
+    };
+
+    toggleCustomInput(fromSelect, fromInput);
+    toggleCustomInput(toSelect, toInput);
+
+    // Validate 3-letter airport code input
+    const validateInput = (input) => {
+        input.addEventListener('input', () => {
+            input.value = input.value.toUpperCase().slice(0, 3); // Limit to 3 uppercase characters
+        });
+    };
+
+    validateInput(fromInput);
+    validateInput(toInput);
+});

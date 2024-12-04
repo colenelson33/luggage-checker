@@ -44,7 +44,7 @@ input[type="file"] {
     background-color: #222;
     border: 2px solid #444;
     color: #e0e0e0;
-    border-radius: 10px;
+    border-radius: 5px;
     resize: vertical; /* Allow vertical resizing only */
     font-size: 16px;
 }
@@ -149,6 +149,10 @@ input[type="file"] {
 
 #capture-btn:hover, #close-camera-btn:hover {
     background-color: #555;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Submit Button */
