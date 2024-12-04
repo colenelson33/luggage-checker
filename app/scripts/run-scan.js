@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeCameraButton = document.getElementById('close-camera-btn');
     const fileUpload = document.getElementById('file-upload');
     const fileLabel = document.getElementById('file-label');
+
+    const fromCustomInput = document.getElementById('from-custom');
+    const toCustomInput = document.getElementById('to-custom');
+    const fromAirportSelect = document.getElementById('from-airport');
+    const toAirportSelect = document.getElementById('to-airport');
     
     // Variables to store the captured image
     let capturedImageBlob = null;
@@ -90,85 +95,84 @@ document.addEventListener('DOMContentLoaded', function() {
     // Submit Button Event Listener
     document.getElementById("submit-btn").addEventListener("click", async function (event) {
         event.preventDefault(); // Prevent default form submission if within a form
-    
-        // Retrieve the description and dropdown selections
+
+        // Retrieve custom inputs if any
+        const fromAirport = fromAirportSelect.value === "custom" && fromCustomInput.value.trim()
+            ? fromCustomInput.value.trim().toUpperCase()
+            : fromAirportSelect.value;
+
+        const toAirport = toAirportSelect.value === "custom" && toCustomInput.value.trim()
+            ? toCustomInput.value.trim().toUpperCase()
+            : toAirportSelect.value;
+
+        // Validate custom inputs and dropdown selections
+        if (!fromAirport || fromAirport.length !== 3) {
+            alert("Please select or enter a valid 3-letter departure airport code.");
+            return;
+        }
+
+        if (!toAirport || toAirport.length !== 3) {
+            alert("Please select or enter a valid 3-letter destination airport code.");
+            return;
+        }
+
+        // Retrieve the description input
         const descriptionInput = document.getElementById("text-input").value.trim();
-        const fromAirportSelect = document.getElementById("from-airport");
-        const toAirportSelect = document.getElementById("to-airport");
-        const fromAirport = fromAirportSelect.value;
-        const toAirport = toAirportSelect.value;
-        const file = fileUpload.files[0];
-    
-        // Basic Validation
-        if (!file && !capturedImageBlob) {
-            alert("Please select an image to upload or take a picture.");
-            return;
-        }
-    
-        if (!fromAirport) {
-            alert("Please select a departure airport.");
-            return;
-        }
-    
-        if (!toAirport) {
-            alert("Please select a destination airport.");
-            return;
-        }
-    
-        // Combine the selected airports with the user's description
+
+        // Combine the description with airport selections
         let combinedDescription = `Please find whether this will be valid From: ${fromAirport}, To: ${toAirport} airports. Focus on whether it is an international flight or local flight if you do not know the specifics. Also, provide relevant links to the needed source if possible, however I want to use you just as a quick source for information, so do everything in your power to see if it passes regulations before telling me to search myself. I understand your response might not be perfect. Respond to this in a clean text format, no markdown.`;
         if (descriptionInput !== "") {
             combinedDescription += ` ${descriptionInput}`;
         }
-    
+
         // Reference to the response output div
         const responseOutput = document.getElementById("response-output");
-        
+
         // Display the "Thinking" animation
         responseOutput.innerHTML = `<span class="thinking">Thinking</span>`;
-        
+
         // Remove any existing 'invalid' class for fresh feedback
         responseOutput.classList.remove("invalid");
-    
+
         // Create a new FormData object and append the necessary data
         const formData = new FormData();
-    
+
         // Append the image file or captured image blob
         if (capturedImageBlob) {
             formData.append("image", capturedImageBlob, 'captured_image.jpg');
-        } else if (file) {
-            formData.append("image", file);
+        } else if (fileUpload.files[0]) {
+            formData.append("image", fileUpload.files[0]);
         }
-    
+
         formData.append("description", combinedDescription); // Add the combined description to the form data
-    
+
         try {
             // Send a POST request to the server with the form data
             const response = await fetch('http://ec2-3-144-122-137.us-east-2.compute.amazonaws.com:80/analyze-image', {
                 method: 'POST',
                 body: formData,
             });
-    
+
             // Check if the response status is within the success range
             if (!response.ok) {
                 throw new Error(`Server error: ${response.status}`);
             }
-    
+
             // Parse the JSON response from the server
             const data = await response.json();
-            
+
             // Check if the response starts with "invalid" (case-insensitive)
             if (String(data.response).toLowerCase().startsWith("invalid")) {
                 responseOutput.classList.add("invalid");
             }
-    
+
             // Display the server's response or a default message
             responseOutput.innerText = data.response || "No response received.";
-    
+
             // Reset the captured image blob after submission
             capturedImageBlob = null;
             fileLabel.textContent = 'Choose an Image';
-    
+
         } catch (error) {
             console.error("Error analyzing image:", error);
             responseOutput.innerText = "Error analyzing image.";

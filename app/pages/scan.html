@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scan Luggage - Luggage Checker</title>
+    <title>Scan Luggage - LuggageCheck</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/scan.css">
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">Luggage Checker</div>
+        <div class="logo">LuggageCheck</div>
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -22,36 +22,34 @@
         <h1>Scan Your Luggage</h1>
         
         <div class="form-container">
-            <!-- Top Row: Airport Selection -->
-            <div class="airport-selection">
-                <div class="dropdown">
-                    <select id="from-airport" name="from-airport">
-                        <option value="" disabled selected>Select your airport</option>
-                        <option value="jfk">JFK</option>
-                        <option value="lax">LAX</option>
-                        <option value="ord">ORD</option>
-                        <option value="atl">ATL</option>
-                    </select>
+            <!-- To and From Airport Dropdowns -->
+            <div class="dropdowns">
+                <div class="airport-selection">
+                    <div class="dropdown">
+                        <select id="from-airport" name="from-airport">
+                            <option value="" disabled selected>Select your departing airport</option>
+                            <option value="custom">Enter Custom Code</option>
+                        </select>
+                        <input id="from-custom" class="text-input hidden" type="text" placeholder="Enter 3-letter code" maxlength="3">
+                    </div>
+                    <div class="dropdown">
+                        <select id="to-airport" name="to-airport">
+                            <option value="" disabled selected>Select your destination airport</option>
+                            <option value="custom">Enter Custom Code</option>
+                        </select>
+                        <input id="to-custom" class="text-input hidden" type="text" placeholder="Enter 3-letter code" maxlength="3">
+                    </div>
                 </div>
-
-                <div class="dropdown">
-                    <select id="to-airport" name="to-airport">
-                        <option value="" disabled selected>Select destination airport</option>
-                        <option value="lhr">LHR</option>
-                        <option value="cdg">CDG</option>
-                        <option value="sin">SIN</option>
-                        <option value="hnd">HND</option>
-                    </select>
-                </div>
+                <script src="../scripts/dropdown.js"></script>
             </div>
-
+                
             <!-- Image Upload and Take Picture Buttons -->
             <div class="image-buttons">
                 <label for="file-upload" id="file-label" class="upload-label">Choose an Image</label>
                 <input id="file-upload" type="file" accept="image/*" />
                 <button id="take-picture" class="camera-btn">Take Picture</button>
             </div>
-
+              
             <!-- Optional Text Submission -->
             <div class="text-description">
                 <label for="text-input">Enter Description of Luggage (Optional):</label>
